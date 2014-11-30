@@ -1,0 +1,319 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 300;
+  background-color: whitesmoke; }
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+
+a:hover {
+  color: #53eaca; }
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 50px; }
+
+.grid {
+  margin: 0 auto;
+  width: 90%;
+  padding: 30px 5%;
+  position: relative;
+  text-align: center; }
+
+.diamondmain {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #53eaca;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+a.diamond {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden; }
+
+.desc {
+  position: relative;
+  display: table-cell;
+  padding: 0 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  text-align: center;
+  vertical-align: middle; }
+
+@media only screen and (min-width: 320px) {
+  .diamondmain {
+    height: 150px;
+    width: 150px;
+    margin: 70px auto;
+    display: block; }
+
+  .diamondmain:nth-child(2n) {
+    margin-top: -50px; }
+
+  a.diamond {
+    height: 120px;
+    width: 120px; }
+
+  a.diamond:nth-child(4n+3) {
+    top: -120px;
+    left: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n) {
+    right: -120px;
+    bottom: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+1) {
+    top: 0px;
+    left: -120px;
+    background-color: rgba(4, 123, 126, 0.6); }
+
+  a.diamond:nth-child(4n+2) {
+    bottom: -120px;
+    right: 0px;
+    background-color: rgba(43, 71, 99, 0.8); }
+
+  .desc {
+    height: 120px;
+    width: 120px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .diamondmain {
+    height: 180px;
+    width: 180px;
+    margin: 90px auto;
+    display: block; }
+
+  .diamondmain:nth-child(2n) {
+    margin-top: -72px; }
+
+  a.diamond {
+    height: 140px;
+    width: 140px; }
+
+  a.diamond:nth-child(4n+3) {
+    top: -140px;
+    left: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n) {
+    right: -140px;
+    bottom: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+1) {
+    top: 0px;
+    left: -140px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+2) {
+    bottom: -140px;
+    right: 0px;
+    background-color: rgba(43, 71, 99, 0.8); }
+
+  a.diamond .desc {
+    height: 140px;
+    width: 140px; }
+
+  .diamondmain .desc {
+    height: 180px;
+    width: 180px; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 600px) {
+  .diamondmain {
+    height: 200px;
+    width: 200px;
+    margin: 110px auto;
+    display: block; }
+
+  .diamondmain:nth-child(2n) {
+    margin-top: -84px; }
+
+  a.diamond {
+    height: 160px;
+    width: 160px; }
+
+  a.diamond:nth-child(4n+3) {
+    top: -160px;
+    left: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n) {
+    right: -160px;
+    bottom: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+1) {
+    top: 0px;
+    left: -160px;
+    background-color: rgba(4, 123, 126, 0.6); }
+
+  a.diamond:nth-child(4n+2) {
+    bottom: -160px;
+    right: 0px;
+    background-color: rgba(43, 71, 99, 0.8); }
+
+  a.diamond .desc {
+    height: 160px;
+    width: 160px; }
+
+  .diamondmain .desc {
+    height: 200px;
+    width: 200px; } }
+@media only screen and (min-width: 768px) {
+  .diamondmain {
+    height: 180px;
+    width: 180px;
+    margin: 90px auto;
+    display: inline-block; }
+
+  .diamondmain:nth-child(2n) {
+    margin-left: 71px;
+    margin-top: 0px; }
+
+  a.diamond {
+    height: 130px;
+    width: 130px; }
+
+  a.diamond:nth-child(4n+3) {
+    top: -130px;
+    left: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n) {
+    top: 0px;
+    left: -130px;
+    right: auto;
+    bottom: auto;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+1) {
+    right: -130px;
+    bottom: 0px;
+    top: auto;
+    left: auto;
+    background-color: rgba(4, 123, 126, 0.6); }
+
+  a.diamond:nth-child(4n+2) {
+    bottom: -130px;
+    right: 0px;
+    background-color: rgba(43, 71, 99, 0.8); }
+
+  a.diamond .desc {
+    height: 130px;
+    width: 130px; }
+
+  .diamondmain .desc {
+    height: 180px;
+    width: 180px; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .diamondmain {
+    height: 220px;
+    width: 220px;
+    margin: 130px auto;
+    display: inline-block; }
+
+  .diamondmain:nth-child(2n) {
+    margin-left: 87px;
+    margin-top: 0px; }
+
+  a.diamond {
+    height: 170px;
+    width: 170px; }
+
+  a.diamond:nth-child(4n+3) {
+    top: -170px;
+    left: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n) {
+    top: 0px;
+    left: -170px;
+    right: auto;
+    bottom: auto;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+1) {
+    right: -170px;
+    bottom: 0px;
+    top: auto;
+    left: auto;
+    background-color: rgba(4, 123, 126, 0.6); }
+
+  a.diamond:nth-child(4n+2) {
+    bottom: -170px;
+    right: 0px;
+    background-color: rgba(43, 71, 99, 0.8); }
+
+  a.diamond .desc {
+    height: 170px;
+    width: 170px; }
+
+  .diamondmain .desc {
+    height: 220px;
+    width: 220px; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .diamondmain {
+    height: 250px;
+    width: 250px;
+    margin: 170px auto;
+    display: inline-block; }
+
+  .diamondmain:nth-child(2n) {
+    margin-left: 99px;
+    margin-top: 0px; }
+
+  a.diamond {
+    height: 200px;
+    width: 200px; }
+
+  a.diamond:nth-child(4n+3) {
+    top: -200px;
+    left: 0px;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n) {
+    top: 0px;
+    left: -200px;
+    right: auto;
+    bottom: auto;
+    background-color: rgba(83, 234, 202, 0.6); }
+
+  a.diamond:nth-child(4n+1) {
+    right: -200px;
+    bottom: 0px;
+    top: auto;
+    left: auto;
+    background-color: rgba(4, 123, 126, 0.6); }
+
+  a.diamond:nth-child(4n+2) {
+    bottom: -200px;
+    right: 0px;
+    background-color: rgba(43, 71, 99, 0.8); }
+
+  a.diamond .desc {
+    height: 200px;
+    width: 200px; }
+
+  .diamondmain .desc {
+    height: 250px;
+    width: 250px; } }

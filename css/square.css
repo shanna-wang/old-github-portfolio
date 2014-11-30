@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("fonts/Roboto-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Signika Light';
+  src: url("fonts/Signika-Light.otf") format("truetype"); }
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 300;
+  background-color: whitesmoke; }
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+
+a:hover {
+  color: #53eaca; }
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 50px; }
+
+.sidecontainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  display: table; }
+
+.side {
+  display: table-cell;
+  vertical-align: middle; }
+  .side .profile {
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .side .profile .photo-bg {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      background: url("../img/profbg.png") center center no-repeat;
+      background-size: cover; }
+    .side .profile .photo-circle {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      margin-top: -80px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      border-radius: 50px;
+      border: 3px solid #fff;
+      z-index: 1; }
+    .side .profile .description, .side .profile .des-more {
+      font-family: 'Roboto Light';
+      word-wrap: break-word;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #888;
+      position: relative; }
+    .side .profile .description {
+      background-color: #fff;
+      margin-top: -45px;
+      padding: 30px 20px;
+      padding-bottom: 40px;
+      z-index: 0; }
+    .side .profile .description h1 {
+      text-transform: uppercase;
+      font-family: 'Signika Light';
+      color: #42464B;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 30px; }
+    .side .profile .des-foot {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      background: url("../img/profbg.png") bottom center no-repeat;
+      background-size: cover; }
+      .side .profile .des-foot .des-more {
+        color: #fff;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        width: 50%;
+        -webkit-transition: 0.3s all ease;
+        -moz-transition: 0.3s all ease;
+        -ms-transition: 0.3s all ease;
+        -o-transition: 0.3s all ease;
+        transition: 0.3s all ease; }
+        .side .profile .des-foot .des-more img {
+          width: 25px;
+          vertical-align: middle; }
+      .side .profile .des-foot .des-more:nth-child(2) {
+        cursor: pointer; }
+      .side .profile .des-foot .des-more:nth-child(2):hover {
+        background-color: rgba(255, 255, 255, 0.2); }

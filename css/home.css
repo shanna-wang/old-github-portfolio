@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("fonts/Roboto-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Signika Light';
+  src: url("fonts/Signika-Light.otf") format("truetype"); }
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  background-color: whitesmoke;
+  color: rgba(45, 45, 45, 0.9); }
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: whitesmoke;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+
+a:hover {
+  color: #53eaca; }
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.content * {
+  position: relative; }
+
+.header {
+  padding: 100px 0px;
+  background-color: rgba(45, 45, 45, 0.9);
+  background: url("../img/fractal.png") bottom center no-repeat;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Signika Light';
+  letter-spacing: 2px;
+  font-size: 24px;
+  line-height: 30px; }
+
+.about {
+  width: 500px;
+  margin: 100px auto;
+  color: rgba(45, 45, 45, 0.9); }
+
+.skills {
+  padding: 20px;
+  background-color: rgba(45, 45, 45, 0.9);
+  color: whitesmoke; }
+  .skills .col {
+    position: relative;
+    float: left;
+    width: 48%;
+    padding: 0px 1%; }
+  .skills .col:nth-child(1) {
+    text-align: right; }
+  .skills .col:nth-child(2) {
+    text-align: left; }
+  .skills .title {
+    width: 100%;
+    font-family: 'Signika Light';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    padding-bottom: 5px;
+    color: rgba(255, 255, 255, 0.3); }
+  .skills .category {
+    margin-bottom: 20px; }
+    .skills .category .items {
+      position: relative;
+      float: left;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: right; }
+    .skills .category .divider {
+      position: relative;
+      float: left; }
+    .skills .category .proficiency {
+      position: relative;
+      float: left;
+      line-height: 20px;
+      width: 100px; }
+      .skills .category .proficiency .circle {
+        display: inline-block;
+        margin: 2px;
+        height: 10px;
+        width: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5); }
+      .skills .category .proficiency .circle.fill {
+        background-color: #53eaca; }
+  .skills .col:nth-child(1) .items, .skills .col:nth-child(1) .proficiency {
+    float: right;
+    text-align: right; }
+  .skills .col:nth-child(2) .items {
+    text-align: left; }

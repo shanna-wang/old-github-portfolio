@@ -1,0 +1,394 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+	 -moz-transition: $transition;
+	  -ms-transition: $transition;
+	   -o-transition: $transition;
+		  transition: $transition;	
+}
+@mixin transform($t) {
+  -webkit-transform: $t;
+	 -moz-transform: $t;
+	  -ms-transform: $t;
+	   -o-transform: $t;
+		  transform: $t;	
+}
+
+$bg: rgba(245,245,245,1);
+$c1: rgba(83,234,202,1);
+$c2: rgba(83,234,202,0.6);
+$c3: rgba(83,234,202,0.6);
+$c4: rgba(4,123,126,.6);
+$c5: rgba(43,71,99,.8);
+
+
+body, html {
+	padding:0;
+	margin:0;
+	font-family:Roboto;
+	font-weight:300;
+	background-color:$bg;
+
+}
+
+a, a:hover, a:visited {
+	text-decoration:none;
+	color:white;
+ 	-webkit-transition:0.5s all ease;
+    transition:0.5s all ease;
+}
+a:hover {
+	color:$c1;
+}
+
+
+.content {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin-top:50px;
+
+}
+
+
+.grid {
+	margin: 0 auto;
+	width:90%;
+	padding:30px 5%;
+	position:relative;
+	text-align:center;
+}
+
+.diamondmain {
+	cursor:pointer;
+	display:inline-block;
+	background-color:$c1;
+	@include transform(rotate(-45deg));
+}
+
+a.diamond {
+	display:inline-block;
+	position:absolute;
+	overflow:hidden;
+}
+.desc {
+	position:relative;
+	display: table-cell;
+	padding: 0 10px;
+	@include transform(rotate(45deg));
+	text-align: center;
+	vertical-align: middle;
+}
+
+@media only screen and (min-width : 320px) {
+    $big: 150px;
+	$small: 120px;
+	$mleft: 37px;
+
+	.diamondmain {
+		height:$big;
+  		width:$big;
+   		margin:70px auto;
+		display:block;
+	}
+	.diamondmain:nth-child(2n) {
+		margin-top:-50px;
+	}
+	a.diamond {
+		height:$small;
+		width:$small;
+	}
+	a.diamond:nth-child(4n+3)  {
+		top:-$small;
+		left:0px;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n)  {
+		right:-$small;
+		bottom:0px;
+		background-color:$c3;
+	}
+	a.diamond:nth-child(4n+1)  {
+		top:0px;
+		left:-$small;
+		background-color:$c4;
+	}
+	a.diamond:nth-child(4n+2)  {
+		bottom:-$small;
+		right:0px;
+		background-color:$c5;
+	}
+	.desc {
+		height:$small;
+		width:$small;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	$big: 180px;
+	$small: 140px;
+
+	.diamondmain {
+		height:$big;
+  		width:$big;
+   		margin:90px auto;
+		display:block;
+	}
+	.diamondmain:nth-child(2n) {
+		margin-top:-72px;
+	}
+	a.diamond {
+		height:$small;
+		width:$small;
+	}
+	a.diamond:nth-child(4n+3)  {
+		top:-$small;
+		left:0px;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n)  {
+		right:-$small;
+		bottom:0px;
+		background-color:$c3;
+	}
+	a.diamond:nth-child(4n+1)  {
+		top:0px;
+		left:-$small;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n+2)  {
+		bottom:-$small;
+		right:0px;
+		background-color:$c5;
+	}
+	a.diamond .desc {
+		height:$small;
+		width:$small;
+	}
+	.diamondmain .desc {
+		height:$big;
+		width:$big;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 600px) {
+	$big: 200px;
+	$small: 160px;
+
+	.diamondmain {
+		height:$big;
+  		width:$big;
+   		margin:110px auto;
+		display:block;
+	}
+	.diamondmain:nth-child(2n) {
+		margin-top:-84px;
+	}
+	a.diamond {
+		height:$small;
+		width:$small;
+	}
+	a.diamond:nth-child(4n+3)  {
+		top:-$small;
+		left:0px;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n)  {
+		right:-$small;
+		bottom:0px;
+		background-color:$c3;
+	}
+	a.diamond:nth-child(4n+1)  {
+		top:0px;
+		left:-$small;
+		background-color:$c4;
+	}
+	a.diamond:nth-child(4n+2)  {
+		bottom:-$small;
+		right:0px;
+		background-color:$c5;
+	}
+	a.diamond .desc {
+		height:$small;
+		width:$small;
+	}
+	.diamondmain .desc {
+		height:$big;
+		width:$big;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	$big: 180px;
+	$small: 130px;
+	$mleft: 71px;
+
+	.diamondmain {
+		height:$big;
+  		width:$big;
+   		margin:90px auto;
+   		display:inline-block;
+	}
+	.diamondmain:nth-child(2n) {
+		margin-left:$mleft;
+		margin-top:0px;
+	}
+	a.diamond {
+		height:$small;
+		width:$small;
+	}
+	a.diamond:nth-child(4n+3)  {
+		top:-$small;
+		left:0px;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n)  {
+		top:0px;
+		left:-$small;
+		right:auto;
+		bottom:auto;
+		background-color:$c3;
+	}
+	a.diamond:nth-child(4n+1)  {
+		right:-$small;
+		bottom:0px;
+		top:auto;
+		left:auto;
+		background-color:$c4;
+	}
+	a.diamond:nth-child(4n+2)  {
+		bottom:-$small;
+		right:0px;
+		background-color:$c5;
+	}
+	a.diamond .desc {
+		height:$small;
+		width:$small;
+	}
+	.diamondmain .desc {
+		height:$big;
+		width:$big;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	$big: 220px;
+	$small: 170px;
+	$mleft: 87px;
+
+	.diamondmain {
+		height:$big;
+  		width:$big;
+   		margin:130px auto;
+		display:inline-block;
+	}
+	.diamondmain:nth-child(2n) {
+		margin-left:$mleft;
+		margin-top:0px;
+	}
+	a.diamond {
+		height:$small;
+		width:$small;
+	}
+	a.diamond:nth-child(4n+3)  {
+		top:-$small;
+		left:0px;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n)  {
+		top:0px;
+		left:-$small;
+		right:auto;
+		bottom:auto;
+		background-color:$c3;
+	}
+	a.diamond:nth-child(4n+1)  {
+		right:-$small;
+		bottom:0px;
+		top:auto;
+		left:auto;
+		background-color:$c4;
+	}
+	a.diamond:nth-child(4n+2)  {
+		bottom:-$small;
+		right:0px;
+		background-color:$c5;
+	}
+	a.diamond .desc {
+		height:$small;
+		width:$small;
+	}
+	.diamondmain .desc {
+		height:$big;
+		width:$big;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+	$big: 250px;
+	$small: 200px;
+	$mleft: 99px;
+
+	.diamondmain {
+		height:$big;
+  		width:$big;
+    	margin:170px auto;
+		display:inline-block;
+	}
+	.diamondmain:nth-child(2n) {
+		margin-left:$mleft;
+		margin-top:0px;
+	}
+	a.diamond {
+		height:$small;
+		width:$small;
+	}
+	a.diamond:nth-child(4n+3)  {
+		top:-$small;
+		left:0px;
+		background-color:$c2;
+	}
+	a.diamond:nth-child(4n)  {
+		top:0px;
+		left:-$small;
+		right:auto;
+		bottom:auto;
+		background-color:$c3;
+	}
+	a.diamond:nth-child(4n+1)  {
+		right:-$small;
+		bottom:0px;
+		top:auto;
+		left:auto;
+		background-color:$c4;
+	}
+	a.diamond:nth-child(4n+2)  {
+		bottom:-$small;
+		right:0px;
+		background-color:$c5;
+	}
+	a.diamond .desc {
+		height:$small;
+		width:$small;
+	}
+	.diamondmain .desc {
+		height:$big;
+		width:$big;
+	}
+}
+
+
+
+

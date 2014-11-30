@@ -1,0 +1,166 @@
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('fonts/Roboto-Light.ttf')  format('truetype')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf')  format('truetype')
+}
+
+@font-face {
+	font-family: 'Signika Light';
+  	src: url('fonts/Signika-Light.otf')  format('truetype')
+
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+	 -moz-transition: $transition;
+	  -ms-transition: $transition;
+	   -o-transition: $transition;
+		  transition: $transition;	
+}
+@mixin transform($t) {
+  -webkit-transform: $t;
+	 -moz-transform: $t;
+	  -ms-transform: $t;
+	   -o-transform: $t;
+		  transform: $t;	
+}
+
+$bg: rgba(245,245,245,1);
+$c1: rgba(83,234,202,1);
+$c2: rgba(83,234,202,.6);
+$c3: rgba(83,234,202,.6);
+$c4: rgba(4,123,126,.6);
+$c5: rgba(43,71,99,.8);
+
+
+body, html {
+	padding:0;
+	margin:0;
+	font-family:Roboto;
+	font-weight:300;
+	background-color:$bg;
+
+}
+
+a, a:hover, a:visited {
+	text-decoration:none;
+	color:white;
+ 	-webkit-transition:0.5s all ease;
+    transition:0.5s all ease;
+}
+a:hover {
+	color:$c1;
+}
+
+
+.content {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin-top:50px;
+}
+
+.sidecontainer {
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:300px;
+	display:table;
+}
+.side {
+	display:table-cell;
+	vertical-align:middle;
+
+	.profile {
+		overflow:hidden;
+		width:80%;
+		margin:0 auto;
+		@include border-radius(5px);
+		@include transition(all .3s ease-in-out);
+
+		.photo-bg {
+			width:100%;
+			height:200px;
+			position:relative;
+			background:url('../img/profbg.png') center center no-repeat;
+			background-size:cover;
+		}
+		.photo-circle {
+			width:100px;
+			height:100px;
+			margin:0 auto;
+			position:relative;
+			margin-top:-80px;
+			@include border-radius(50px);
+			border:3px solid #fff;
+			z-index:1;
+		}
+		.description, .des-more {
+			font-family:'Roboto Light';
+			word-wrap:break-word;
+			font-size:12px;
+			line-height:14px;
+			text-align:center;
+			color:#888;
+			position:relative;
+		}
+		.description {
+			background-color:#fff;
+			margin-top:-45px;
+			padding:30px 20px;
+			padding-bottom:40px;
+			z-index:0;
+		}
+		.description h1 {
+			text-transform:uppercase;
+			font-family:'Signika Light';
+			color:#42464B;
+			font-size:20px;
+			line-height:20px;
+			margin-top:30px;
+		}
+		.des-foot {
+			position:relative;
+			width:100%;
+			height:40px;
+			background:url('../img/profbg.png') bottom center no-repeat;
+			background-size:cover;
+
+			.des-more {
+				color:#fff;
+				float:left;
+				height:40px;
+				line-height:40px;
+				width: 50%;
+				@include transition(0.3s all ease);
+
+				img {
+					width:25px;
+					vertical-align:middle;
+				}
+			}
+			.des-more:nth-child(2) {
+				cursor:pointer;
+			}
+			.des-more:nth-child(2):hover {
+				background-color:rgba(255,255,255,0.2);
+			}
+			
+		}	
+	}
+}
+
