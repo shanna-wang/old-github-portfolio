@@ -37,12 +37,10 @@
 }
 
 $light: rgba(245,245,245,1);
-$dark: rgba(45,45,45,0.9);
-$c1: rgba(83,234,202,1);
-$c2: rgba(83,234,202,.6);
-$c3: rgba(83,234,202,.6);
-$c4: rgba(4,123,126,.6);
-$c5: rgba(43,71,99,.8);
+$dark: rgba(47,41,44,0.9);
+$c1: rgba(190,151,199,1);
+$c2: rgba(190,151,199,.6);
+$c3: rgba(190,151,199,.4);
 
 
 body, html {
@@ -76,22 +74,24 @@ a:hover {
 	position:relative;
 }
 .header {
-	padding:100px 0px;
+	height:50px;
 	background-color:$dark;
-	background:url('../img/fractal.png') bottom center no-repeat;
+	background:url('../img/fractal.jpg') bottom center no-repeat;
 	background-size:cover;
 	color:rgba(0,0,0,0.5);
+}
+.about {
+	width:500px;
+	margin:100px auto;
+	color:$dark;
+}
+h1 {
 	text-align:center;
 	text-transform:uppercase;
 	font-family:'Signika Light';
 	letter-spacing:2px;
 	font-size:24px;
 	line-height:30px;
-}
-.about {
-	width:500px;
-	margin:100px auto;
-	color:$dark;
 }
 .skills {
 	padding:20px;
@@ -101,8 +101,8 @@ a:hover {
 	.col {
 		position:relative;
 		float:left;
-		width:48%;
-		padding:0px 1%;
+		width:46%;
+		padding:0px 2%;
 	}
 	.col:nth-child(1) {
 		text-align:right;
@@ -126,39 +126,52 @@ a:hover {
 		margin-bottom:20px;
 
 		.items {
-			position:relative;
-			float:left;
+			display:block;
 			font-size:14px;
 			line-height:20px;
 			text-align:right;
-		}
-		.divider {
-			position:relative;
-			float:left;
-		}
-		.proficiency {
-			position:relative;
-			float:left;
-			line-height:20px;
-			width:100px;
+			@include transition(all 0.3s ease);
+
 			.circle {
 				display:inline-block;
 				margin:2px;
+				/*
 				height:10px;
 				width:10px;
 				@include border-radius(5px);
+				*/
+				height:7px;
+				width:7px;
+				@include transition(all 0.3s ease);
+				@include transform(rotate(45deg));
 				background-color:rgba(0,0,0,0.5);
 			}
 			.circle.fill {
 				background-color:$c1;
 			}
+			.circle:nth-child(1) {
+				margin-left:10px;
+			}
+			.circle:nth-child(5) {
+				margin-right:10px;
+			}
 		}
+		.items:hover .circle {
+			@include transform(rotate(0deg));
+			width:12px;
+			margin:0;
+			margin-left:-4px;
+		}
+		.items:hover {
+			margin-right:40px;
+		}
+
 	}
-	.col:nth-child(1) .items, .col:nth-child(1) .proficiency {
-		float:right;
+
+	.col:nth-child(2) .items {
 		text-align:right;
 	}
-	.col:nth-child(2) .items {
+	.col:nth-child(3) .items {
 		text-align:left;
 	}
 
