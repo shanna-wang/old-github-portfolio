@@ -5,6 +5,11 @@
 }
 
 @font-face {
+  font-family: 'Roboto Thin';
+  src: url('fonts/Roboto-Thin.ttf')  format('truetype')
+}
+
+@font-face {
   font-family: 'Roboto';
   src: url('fonts/Roboto-Regular.ttf')  format('truetype')
 }
@@ -14,7 +19,19 @@
   	src: url('fonts/Signika-Light.otf')  format('truetype')
 
 }
+@mixin filter($filter) { 
+  -webkit-filter: $filter;
+  -moz-filter: $filter;
+  -ms-filter: $filter;
+  -o-filter: $filter;
+  filter: $filter;
+}
 
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -74,11 +91,40 @@ a:hover {
 	position:relative;
 }
 .header {
-	height:50px;
+	height:200px;
 	background-color:$dark;
-	background:url('../img/fractal.jpg') bottom center no-repeat;
+	background:url('../img/fractal.jpg') bottom center no-repeat $dark;
 	background-size:cover;
 	color:rgba(0,0,0,0.5);
+	text-align:center;
+
+	.square_outer {
+		display:inline-block;
+		width:auto;
+		margin:0 auto;
+		margin-top:60px;
+
+		border:3px solid white;
+		/*@include transform(rotate(45deg));*/
+		@include transition(all .5s ease);
+
+	}
+	
+	.square_inner {
+		width:70px;
+		height:70px;
+		margin:2px;
+		border:1px solid white;
+	}
+	.logo {
+		background:url("../img/logo_white.png") center center no-repeat;
+		background-size:contain;
+		width:60px;
+		height:60px;
+		margin:0 auto;
+		position:relative;
+		margin-top:-70px;
+	}
 }
 .about {
 	width:60%;
@@ -149,10 +195,10 @@ a:hover {
 h1 {
 	text-align:center;
 	text-transform:uppercase;
-	font-family:'Signika Light';
+	font-family:'Roboto Thin';
 	letter-spacing:2px;
-	font-size:24px;
-	line-height:30px;
+	font-size:40px;
+	line-height:46px;
 }
 
 .skills {
@@ -175,7 +221,7 @@ h1 {
 
 	.title {
 		width:100%;
-		font-family:'Signika Light';
+		font-family:'Roboto Thin';
 		text-transform:uppercase;
 		letter-spacing:2px;
 		padding:20px 0;
@@ -254,4 +300,97 @@ h1 {
 	width:100%;
 	margin:50px auto;
 	color:$dark;
+	text-align:center;
+
+	.work {
+
+		position:relative;
+		display:inline-block;
+		height:200px;
+		width:200px;
+		text-align:center;
+		background-color:$dark;
+		@include transition(all 0.5s ease);
+
+		.overlay {
+			position:absolute;
+			top:0;
+			left:0;
+			height:100%;
+			width:100%;
+			@include transition(all 0.2s ease);
+			@include opacity(0.3);
+			background:url('../img/fractal.jpg') bottom center no-repeat $dark;
+			background-size:cover;
+		}
+		.textcontainer {
+			cursor:pointer;
+			display:table;
+			width:100%;
+			height:100%;
+		}
+		.text {
+			cursor:pointer;
+			display:table-cell;
+			height:100%;
+			vertical-align:middle;
+			font-family:'Roboto Thin';
+			color:$light;
+			font-size:16px;
+			line-height:20px;
+		}
+		.text h2 {
+			text-transform:uppercase;
+			letter-spacing:4px;
+			font-size:32px;
+			line-height:34px;
+			margin:0;
+		}
+		.text h3 {
+			font-size:12px;
+			line-height:14px;
+			font-style:italic;
+			margin:10px;
+			margin-bottom:20px;
+			@include opacity(0.5);
+		}
+	}
+	.work:hover .overlay {
+		@include opacity(0);
+	}
+	.work:nth-child(2){
+		width:400px;
+	}
+	.work:nth-child(2) .overlay {
+		background:url('../img/fractal.jpg') bottom center no-repeat $dark;
+		background-size:1000px auto;
+	}
+	.work:nth-child(2):hover {
+		background-color:rgb(38,209,176) ;
+	}
+	.work:nth-child(3) .overlay {
+		background:url('../img/fractal.jpg') bottom left no-repeat $dark;
+		background-size:500px auto;
+	}
+	.work:nth-child(3):hover {
+		background-color:rgb(0,0,0);
+	}
+
+	.work:nth-child(4) .overlay {
+		background:url('../img/fractal.jpg') bottom right no-repeat $dark;
+		background-size:1200px auto;
+	}
+	.work:nth-child(4):hover {
+		background-color:rgb(244,78,78);
+	}
+	.work:nth-child(5), .work:nth-child(4) {
+		width:300px;
+	}
+	.work:nth-child(5) .overlay {
+		background:url('../img/fractal.jpg') bottom left no-repeat $dark;
+		background-size:900px auto;
+	}
+	.work:nth-child(5):hover {
+		background-color:rgb(200,222,124);
+	}
 }
