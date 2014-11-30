@@ -25,7 +25,7 @@ a, a:hover, a:visited {
   transition: 0.5s all ease; }
 
 a:hover {
-  color: #be97c7; }
+  color: #875064; }
 
 .content {
   position: absolute;
@@ -45,9 +45,76 @@ a:hover {
   color: rgba(0, 0, 0, 0.5); }
 
 .about {
-  width: 500px;
+  width: 60%;
+  max-width: 500px;
   margin: 100px auto;
-  color: rgba(47, 41, 44, 0.9); }
+  color: rgba(47, 41, 44, 0.9);
+  text-align: justify; }
+  .about .location {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px; }
+    .about .location img {
+      height: 20px;
+      vertical-align: middle;
+      margin-top: -5px;
+      margin-right: -2px; }
+  .about .links {
+    margin: 20px auto;
+    text-align: center; }
+    .about .links a.square {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      margin: 20px 8;
+      background-color: rgba(47, 41, 44, 0.9);
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px; }
+      .about .links a.square .icon {
+        height: 40px;
+        width: 40px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
+    .about .links a.square:nth-child(1):hover {
+      background-color: black; }
+    .about .links a.square:nth-child(2):hover {
+      background-color: #ea4c89; }
+    .about .links a.square:nth-child(3):hover {
+      background-color: #007bb6; }
+    .about .links a.square:nth-child(1) .icon {
+      background: url("../img/icon_github.png") center center no-repeat;
+      background-size: 20px auto; }
+    .about .links a.square:nth-child(2) .icon {
+      background: url("../img/icon_dribbble.png") center center no-repeat;
+      background-size: 20px auto; }
+    .about .links a.square:nth-child(3) .icon {
+      background: url("../img/icon_linkedin.png") center center no-repeat;
+      background-size: 20px auto; }
+    .about .links a.square:hover {
+      -webkit-transform: rotate(405deg);
+      -moz-transform: rotate(405deg);
+      -ms-transform: rotate(405deg);
+      -o-transform: rotate(405deg);
+      transform: rotate(405deg);
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      border-radius: 0px; }
 
 h1 {
   text-align: center;
@@ -58,7 +125,7 @@ h1 {
   line-height: 30px; }
 
 .skills {
-  padding: 20px;
+  padding: 50px 0;
   background-color: rgba(47, 41, 44, 0.9);
   color: whitesmoke; }
   .skills .col {
@@ -100,35 +167,48 @@ h1 {
         */
         height: 7px;
         width: 7px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         transform: rotate(45deg);
-        background-color: rgba(0, 0, 0, 0.5); }
+        background-color: rgba(0, 0, 0, 0.3); }
       .skills .category .items .circle.fill {
-        background-color: #be97c7; }
+        background-color: #875064; }
       .skills .category .items .circle:nth-child(1) {
         margin-left: 10px; }
       .skills .category .items .circle:nth-child(5) {
         margin-right: 10px; }
-    .skills .category .items:hover .circle {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      width: 12px;
-      margin: 0;
-      margin-left: -4px; }
-    .skills .category .items:hover {
-      margin-right: 40px; }
-  .skills .col:nth-child(2) .items, .skills .col:nth-child(2) .proficiency {
+  .skills .items:hover .circle {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    width: 13px;
+    margin: 0;
+    margin-left: -3px; }
+  .skills .items:hover .circle.fill {
+    background-color: #ca7e7e; }
+  .skills .col:nth-child(2) .items:hover .circle:nth-child(1) {
+    margin-left: 20px; }
+  .skills .col:nth-child(3) .items:hover .circle:nth-child(1) {
+    margin-left: 10px; }
+  .skills .col:nth-child(2) .items:hover .circle:nth-child(5) {
+    margin-right: 10px; }
+  .skills .col:nth-child(3) .items:hover .circle:nth-child(5) {
+    margin-right: 20px; }
+  .skills .col:nth-child(2) .items {
     text-align: right; }
   .skills .col:nth-child(3) .items {
     text-align: left; }
+
+.pofo {
+  width: 100%;
+  margin: 50px auto;
+  color: rgba(47, 41, 44, 0.9); }
