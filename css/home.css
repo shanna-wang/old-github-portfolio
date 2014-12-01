@@ -377,7 +377,9 @@ h1 {
     .pofo .work:nth-child(6) {
       width: 250px; }
     .pofo .work:nth-child(7) {
-      width: 350px; } }
+      width: 350px; }
+    .pofo .work:nth-child(8) {
+      width: 300px; } }
 @media only screen and (min-width: 1000px) {
   .pofo {
     width: 1000px; } }
