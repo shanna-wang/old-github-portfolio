@@ -413,6 +413,9 @@ h1 {
   font-family: 'Roboto';
   margin-left: 10px; }
 
+.theatre::-webkit-scrollbar {
+  display: none; }
+
 .theatre {
   position: fixed;
   top: 0;
