@@ -221,7 +221,7 @@
             </div>
 
             <div class="pofo">
-                <h1>Work</h1>
+                <h1>Projects</h1>
 
                 <div class="work" id="dobundle">
                     <div class="overlay"></div>
@@ -285,7 +285,9 @@
                 </div>
 
             </div>
-
+            <div class="contact">
+                <a href="mailto:name@rapidtables.com"><h1>Want to talk?</h1></a>
+            </div>
 
         </div>
         
@@ -547,13 +549,20 @@
 
         </div>
 
+
+        <div class="topbar hidden">
+            <a id="header">About</a>
+            <a id="skills">Skills</a>
+            <a id="pofo">Projects</a>
+            <a id="contact">Contact</a>
+            <a href="/">CV</a>
+        </div>
+
         <script type="text/javascript">
 
             $(function() {
                 $('.theatre').click(function(e) { 
-                    console.log("yo");
                     if( e.target !== this ) return;
-                    console.log("what");
                     $('.theatre').addClass("hidden");
                 });
                 $(document).keyup(function(e){
@@ -566,6 +575,20 @@
                     $('.preview').hide();
                     $('.'+c).show();
                     $('.theatre').removeClass("hidden");
+                    $('.theatre').scrollTop(0);
+                });
+                $(window).scroll(function(){
+                    if ($(this).scrollTop() > 200) {
+                        console.log("y");
+                        $('.topbar').removeClass("hidden");
+                    } else {
+                        $('.topbar').addClass("hidden");
+                    }
+                });
+                $('.topbar a').click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("."+$(this).attr('id')).offset().top
+                    }, 500);
                 });
              });
          </script>

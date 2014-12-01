@@ -302,13 +302,15 @@ h1 {
 	margin:50px auto;
 	color:$dark;
 	text-align:center;
+	padding-top:50px;
 
 	.work {
 
 		position:relative;
 		display:inline-block;
 		height:250px;
-		width:200px;
+		width:100%;
+		margin-bottom:5px;
 		text-align:center;
 		background-color:$dark;
 		overflow:hidden;
@@ -362,18 +364,7 @@ h1 {
 		@include opacity(0);
 		height:0;
 	}
-	.work:nth-child(2){
-		width:400px;
-	}
-	.work:nth-child(5), .work:nth-child(4) {
-		width:300px;
-	}
-	.work:nth-child(6) {
-		width:250px;
-	}
-	.work:nth-child(7) {
-		width:350px;
-	}
+
 	.work:nth-child(2) .overlay {
 		background:url('../img/fractal.jpg') bottom center no-repeat $dark;
 		background-size:1000px auto;
@@ -383,7 +374,7 @@ h1 {
 	}
 	.work:nth-child(3) .overlay {
 		background:url('../img/fractal.jpg') top left no-repeat $dark;
-		background-size:500px auto;
+		background-size:650px auto;
 	}
 	.work:nth-child(3):hover {
 		background-color:rgb(0,0,0);
@@ -419,10 +410,91 @@ h1 {
 	}
 }
 
+@media only screen and (min-width: 500px) {
+	.work {
+		width:90%;
+	}
+}
+
+@media only screen and (min-width: 650px) {
+	.pofo {
+		width:700px;
+	}
+	.work {
+		margin-bottom:0;
+	}
+	.work:nth-child(2){
+		width:400px;
+	}
+	.work:nth-child(3) {
+		width:200px;
+	}
+	.work:nth-child(5), .work:nth-child(4) {
+		width:300px;
+	}
+	.work:nth-child(6) {
+		width:250px;
+	}
+	.work:nth-child(7) {
+		width:350px;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.pofo {
+		width:1000px;
+	}
+
+}
+
+.contact {
+	background-color:$dark;
+	color:$light;
+	padding:100px;
+	a {
+		color:$c2;
+	}
+	a:hover {
+		color:white;
+	}
+}
+.topbar {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:50px;
+	overflow:hidden;
+	@include transition(all 0.5s ease);
+	background-color:rgba(47,41,44,0.8);
+	text-align:right;
+	a {
+		cursor:pointer;
+		display:inline-block;
+		position:relative;
+		padding:15px 10px;
+		line-height:20px;
+		font-size:14px;
+		font-family:'Roboto Thin';
+	}
+	a:hover {
+		background-color:$c3;
+		color:white;
+	}
+}
+
+.topbar.hidden {
+	height:0px;
+	@include opacity(0);
+}
 
 
-
-
+@media only screen and (min-width: 500px) {
+	.topbar {
+		a {
+			padding:15px 30px;
+		}
+	}
+}
 
 .emphasis {
 	text-transform:uppercase;
@@ -460,11 +532,12 @@ h1 {
 			background:url('../img/fractal.jpg') center center $dark;
 			background-size:cover;
 			height:30px;
-			margin-top:50px;
+			margin-top:100px;
 		}
 		.bot {
 			background:url('../img/fractal.jpg') left center $dark;
 			background-size:cover;
+			margin-top:50px;
 			margin-bottom:50px;
 		}
 		.desc {
