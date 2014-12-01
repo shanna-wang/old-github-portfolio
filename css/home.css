@@ -373,6 +373,8 @@ h1 {
     color: #ca7e7e; }
   .contact a:hover {
     color: white; }
+  .contact a img {
+    height: 30px; }
 
 .topbar {
   position: fixed;
