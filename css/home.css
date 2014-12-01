@@ -44,7 +44,7 @@ a:hover {
 .header {
   height: 200px;
   background-color: rgba(47, 41, 44, 0.9);
-  background: url("../img/fractal.jpg") bottom center no-repeat rgba(47, 41, 44, 0.9);
+  background: url("../img/fractal_crap.jpg") bottom center no-repeat rgba(47, 41, 44, 0.9);
   background-size: cover;
   color: rgba(0, 0, 0, 0.5);
   text-align: center; }
