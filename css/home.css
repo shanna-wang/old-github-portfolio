@@ -408,7 +408,7 @@ h1 {
     font-size: 14px;
     font-family: 'Roboto Thin'; }
   .topbar a:hover {
-    background-color: #bc7585;
+    background-color: rgba(188, 117, 133, 0.4);
     color: white; }
 
 @media only screen and (min-width: 500px) {
