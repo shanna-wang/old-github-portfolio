@@ -245,15 +245,13 @@ h1 {
 			.circle {
 				display:inline-block;
 				margin:2px;
-				/*
-				height:10px;
-				width:10px;
-				@include border-radius(5px);
-				*/
-				height:7px;
-				width:7px;
+				
+				height:8px;
+				width:8px;
+				@include border-radius(4px);
+				
+				
 				@include transition(all 0.2s ease);
-				@include transform(rotate(45deg));
 				background-color:rgba(0,0,0,0.3);
 			}
 			.circle.fill {
@@ -270,10 +268,10 @@ h1 {
 
 	}
 	.items:hover .circle {
-		@include transform(rotate(0deg));
-		width:13px;
-		margin:0;
-		margin-left:-3px;
+		height:8px;
+		width:8px;
+		@include border-radius(0px);
+		@include transform(rotate(45deg));
 	}
 	.items:hover .circle.fill {
 		background-color:$c2;
