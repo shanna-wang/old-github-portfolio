@@ -89,62 +89,63 @@ a:hover {
       vertical-align: middle;
       margin-top: -5px;
       margin-right: -2px; }
-  .about .links {
-    margin: 20px auto;
-    text-align: center; }
-    .about .links a.square {
-      display: inline-block;
+
+.links {
+  margin: 20px auto;
+  text-align: center; }
+  .links a.square {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 20px 8;
+    background-color: rgba(47, 41, 44, 0.9);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px; }
+    .links a.square .icon {
       height: 40px;
       width: 40px;
-      margin: 20px 8;
-      background-color: rgba(47, 41, 44, 0.9);
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      border-radius: 20px; }
-      .about .links a.square .icon {
-        height: 40px;
-        width: 40px;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-    .about .links a.square:nth-child(1):hover {
-      background-color: black; }
-    .about .links a.square:nth-child(2):hover {
-      background-color: #ea4c89; }
-    .about .links a.square:nth-child(3):hover {
-      background-color: #007bb6; }
-    .about .links a.square:nth-child(1) .icon {
-      background: url("../img/icon_github.png") center center no-repeat;
-      background-size: 20px auto; }
-    .about .links a.square:nth-child(2) .icon {
-      background: url("../img/icon_dribbble.png") center center no-repeat;
-      background-size: 20px auto; }
-    .about .links a.square:nth-child(3) .icon {
-      background: url("../img/icon_linkedin.png") center center no-repeat;
-      background-size: 20px auto; }
-    .about .links a.square:hover {
-      -webkit-transform: rotate(405deg);
-      -moz-transform: rotate(405deg);
-      -ms-transform: rotate(405deg);
-      -o-transform: rotate(405deg);
-      transform: rotate(405deg);
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      -ms-border-radius: 0px;
-      border-radius: 0px; }
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+  .links a.square:nth-child(1):hover {
+    background-color: black; }
+  .links a.square:nth-child(2):hover {
+    background-color: #ea4c89; }
+  .links a.square:nth-child(3):hover {
+    background-color: #007bb6; }
+  .links a.square:nth-child(1) .icon {
+    background: url("../img/icon_github.png") center center no-repeat;
+    background-size: 20px auto; }
+  .links a.square:nth-child(2) .icon {
+    background: url("../img/icon_dribbble.png") center center no-repeat;
+    background-size: 20px auto; }
+  .links a.square:nth-child(3) .icon {
+    background: url("../img/icon_linkedin.png") center center no-repeat;
+    background-size: 20px auto; }
+  .links a.square:hover {
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    transform: rotate(405deg);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px; }
 
 h1 {
   text-align: center;
@@ -246,10 +247,11 @@ h1 {
   .pofo .work {
     position: relative;
     display: inline-block;
-    height: 200px;
+    height: 250px;
     width: 200px;
     text-align: center;
     background-color: rgba(47, 41, 44, 0.9);
+    overflow: hidden;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -261,11 +263,11 @@ h1 {
       left: 0;
       height: 100%;
       width: 100%;
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      -ms-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       opacity: 0.3;
       filter: alpha(opacity=30);
       background: url("../img/fractal.jpg") bottom center no-repeat rgba(47, 41, 44, 0.9);
@@ -283,7 +285,8 @@ h1 {
       font-family: 'Roboto Thin';
       color: whitesmoke;
       font-size: 16px;
-      line-height: 20px; }
+      line-height: 20px;
+      padding: 0px 20px; }
     .pofo .work .text h2 {
       text-transform: uppercase;
       letter-spacing: 4px;
@@ -300,16 +303,23 @@ h1 {
       filter: alpha(opacity=50); }
   .pofo .work:hover .overlay {
     opacity: 0;
-    filter: alpha(opacity=0); }
+    filter: alpha(opacity=0);
+    height: 0; }
   .pofo .work:nth-child(2) {
     width: 400px; }
+  .pofo .work:nth-child(5), .pofo .work:nth-child(4) {
+    width: 300px; }
+  .pofo .work:nth-child(6) {
+    width: 250px; }
+  .pofo .work:nth-child(7) {
+    width: 350px; }
   .pofo .work:nth-child(2) .overlay {
     background: url("../img/fractal.jpg") bottom center no-repeat rgba(47, 41, 44, 0.9);
     background-size: 1000px auto; }
   .pofo .work:nth-child(2):hover {
     background-color: #26d1b0; }
   .pofo .work:nth-child(3) .overlay {
-    background: url("../img/fractal.jpg") bottom left no-repeat rgba(47, 41, 44, 0.9);
+    background: url("../img/fractal.jpg") top left no-repeat rgba(47, 41, 44, 0.9);
     background-size: 500px auto; }
   .pofo .work:nth-child(3):hover {
     background-color: black; }
@@ -318,10 +328,108 @@ h1 {
     background-size: 1200px auto; }
   .pofo .work:nth-child(4):hover {
     background-color: #f44e4e; }
-  .pofo .work:nth-child(5), .pofo .work:nth-child(4) {
-    width: 300px; }
   .pofo .work:nth-child(5) .overlay {
-    background: url("../img/fractal.jpg") bottom left no-repeat rgba(47, 41, 44, 0.9);
-    background-size: 900px auto; }
+    background: url("../img/fractal.jpg") top left no-repeat rgba(47, 41, 44, 0.9);
+    background-size: 600px auto; }
   .pofo .work:nth-child(5):hover {
     background-color: #c8de7c; }
+  .pofo .work:nth-child(6) .overlay {
+    background: url("../img/fractal.jpg") top right no-repeat rgba(47, 41, 44, 0.9);
+    background-size: 900px auto; }
+  .pofo .work:nth-child(6):hover {
+    background-color: #67414f; }
+  .pofo .work:nth-child(7) .overlay {
+    background: url("../img/fractal.jpg") bottom left no-repeat rgba(47, 41, 44, 0.9);
+    background-size: 1000px auto; }
+  .pofo .work:nth-child(7):hover {
+    background-color: #fb7a86; }
+
+.emphasis {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto';
+  margin-left: 10px; }
+
+.theatre {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .theatre .preview {
+    width: 80%;
+    margin: 0 auto;
+    background-color: whitesmoke; }
+    .theatre .preview a {
+      color: rgba(47, 41, 44, 0.9);
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .theatre .preview a:hover {
+      color: #ca7e7e;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .theatre .preview .top, .theatre .preview .bot {
+      position: relative;
+      width: 100%;
+      background: url("../img/fractal.jpg") center center rgba(47, 41, 44, 0.9);
+      background-size: cover;
+      height: 30px;
+      margin-top: 50px; }
+    .theatre .preview .bot {
+      background: url("../img/fractal.jpg") left center rgba(47, 41, 44, 0.9);
+      background-size: cover;
+      margin-bottom: 50px; }
+    .theatre .preview .desc {
+      position: relative;
+      padding: 50px;
+      padding-bottom: 20px;
+      color: rgba(47, 41, 44, 0.9);
+      max-width: 500px;
+      margin: 0 auto; }
+      .theatre .preview .desc h2 {
+        font-size: 16px;
+        line-height: 18px;
+        font-style: italic;
+        margin: 10px;
+        margin-bottom: 20px;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        text-align: center;
+        margin-bottom: 50px; }
+      .theatre .preview .desc a {
+        color: #ca7e7e; }
+      .theatre .preview .desc ul {
+        margin-bottom: 50px; }
+      .theatre .preview .desc .links {
+        margin-top: -30px; }
+      .theatre .preview .desc a.site:hover {
+        background-color: black; }
+      .theatre .preview .desc a.site .icon {
+        background: url("../img/icon_rarrow.png") center center no-repeat;
+        background-size: 20px auto; }
+    .theatre .preview .ss {
+      width: 100%;
+      text-align: center;
+      line-height: 50px; }
+      .theatre .preview .ss img {
+        width: 100%;
+        margin-bottom: 20px; }
+
+.theatre.hidden {
+  top: -300px;
+  height: 0;
+  opacity: 0;
+  filter: alpha(opacity=0); }
