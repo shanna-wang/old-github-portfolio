@@ -626,13 +626,11 @@ h1 {
 			text-align:center;
 			line-height:50px;
 			img {
-				@include filter(blur(1px));
 				@include transition(all 0.5s ease);
 				width:70%;
 				margin-bottom:20px;
 			}
 			img:hover {
-				@include filter(blur(0px));
 			}
 		}
 	}

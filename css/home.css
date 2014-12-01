@@ -513,11 +513,6 @@ h1 {
       text-align: center;
       line-height: 50px; }
       .theatre .preview .ss img {
-        -webkit-filter: blur(1px);
-        -moz-filter: blur(1px);
-        -ms-filter: blur(1px);
-        -o-filter: blur(1px);
-        filter: blur(1px);
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
@@ -525,12 +520,6 @@ h1 {
         transition: all 0.5s ease;
         width: 70%;
         margin-bottom: 20px; }
-      .theatre .preview .ss img:hover {
-        -webkit-filter: blur(0px);
-        -moz-filter: blur(0px);
-        -ms-filter: blur(0px);
-        -o-filter: blur(0px);
-        filter: blur(0px); }
   .theatre .close {
     cursor: pointer;
     position: fixed;
