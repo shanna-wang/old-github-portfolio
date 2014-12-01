@@ -42,7 +42,7 @@ a:hover {
   position: relative; }
 
 .header {
-  height: 200px;
+  padding: 100px;
   background-color: rgba(47, 41, 44, 0.9);
   background: url("../img/fractal_crop.jpg") bottom center no-repeat rgba(47, 41, 44, 0.9);
   background-size: cover;
@@ -66,13 +66,14 @@ a:hover {
     margin: 2px;
     border: 1px solid white; }
   .header .logo {
-    background: url("../img/logo_white.png") center center no-repeat;
+    background: url("../img/logo_black.png") center center no-repeat;
     background-size: contain;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
     position: relative;
-    margin-top: -70px; }
+    opacity: 0.3;
+    filter: alpha(opacity=30); }
 
 .about {
   width: 60%;
@@ -401,6 +402,8 @@ h1 {
   text-align: right; }
   .topbar a {
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     display: inline-block;
     position: relative;
     padding: 15px 10px;
