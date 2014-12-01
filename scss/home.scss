@@ -137,7 +137,8 @@ a:hover {
 		margin-bottom:10px;
 		font-size:14px;
 		img {
-			height:20px;
+			@include opacity(0.8);
+			height:15px;
 			vertical-align:middle;
 			margin-top:-5px;
 			margin-right:-2px;
@@ -431,25 +432,26 @@ h1 {
 @media only screen and (min-width: 650px) {
 	.pofo {
 		width:700px;
+		.work {
+			margin-bottom:0px;
+		}
+		.work:nth-child(2){
+			width:400px;
+		}
+		.work:nth-child(3) {
+			width:200px;
+		}
+		.work:nth-child(5), .work:nth-child(4) {
+			width:300px;
+		}
+		.work:nth-child(6) {
+			width:250px;
+		}
+		.work:nth-child(7) {
+			width:350px;
+		}
 	}
-	.work {
-		margin-bottom:0;
-	}
-	.work:nth-child(2){
-		width:400px;
-	}
-	.work:nth-child(3) {
-		width:200px;
-	}
-	.work:nth-child(5), .work:nth-child(4) {
-		width:300px;
-	}
-	.work:nth-child(6) {
-		width:250px;
-	}
-	.work:nth-child(7) {
-		width:350px;
-	}
+	
 }
 @media only screen and (min-width: 1000px) {
 	.pofo {
