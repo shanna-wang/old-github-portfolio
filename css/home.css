@@ -82,7 +82,8 @@ a:hover {
   color: rgba(47, 41, 44, 0.9);
   text-align: justify; }
   .about .location {
-    text-align: center;
+    width: 125px;
+    margin: 0 auto;
     margin-bottom: 10px;
     font-size: 14px; }
     .about .location img {
@@ -92,6 +93,11 @@ a:hover {
       vertical-align: middle;
       margin-top: -5px;
       margin-right: 5px; }
+    .about .location a {
+      line-height: 30px;
+      color: rgba(47, 41, 44, 0.9); }
+    .about .location a:hover {
+      color: #ca7e7e; }
 
 .links {
   margin: 20px auto;

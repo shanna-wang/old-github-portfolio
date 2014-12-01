@@ -133,7 +133,8 @@ a:hover {
 	color:$dark;
 	text-align:justify;
 	.location {
-		text-align:center;
+		width:125px;
+		margin:0 auto;
 		margin-bottom:10px;
 		font-size:14px;
 		img {
@@ -142,6 +143,13 @@ a:hover {
 			vertical-align:middle;
 			margin-top:-5px;
 			margin-right:5px;
+		}
+		a {
+			line-height:30px;
+			color:$dark;
+		}
+		a:hover {
+			color:$c2;
 		}
 	}
 	
