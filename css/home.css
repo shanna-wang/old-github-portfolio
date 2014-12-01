@@ -133,15 +133,15 @@ a:hover {
   .links a.square:nth-child(1):hover {
     background-color: black; }
   .links a.square:nth-child(2):hover {
-    background-color: #ea4c89; }
+    background-color: #1769ff; }
   .links a.square:nth-child(3):hover {
     background-color: #007bb6; }
   .links a.square:nth-child(1) .icon {
     background: url("../img/icon_github.png") center center no-repeat;
     background-size: 20px auto; }
   .links a.square:nth-child(2) .icon {
-    background: url("../img/icon_dribbble.png") center center no-repeat;
-    background-size: 20px auto; }
+    background: url("../img/icon_behance.png") center center no-repeat;
+    background-size: 30px auto; }
   .links a.square:nth-child(3) .icon {
     background: url("../img/icon_linkedin.png") center center no-repeat;
     background-size: 20px auto; }

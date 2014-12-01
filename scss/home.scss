@@ -179,7 +179,7 @@ a:hover {
 			background-color:black;
 		}
 		a.square:nth-child(2):hover {
-			background-color: rgb(234,76,137);
+			background-color: rgb(23,105,255);
 		}
 		a.square:nth-child(3):hover {
 			background-color: rgb(0,123,182);
@@ -189,8 +189,8 @@ a:hover {
 			background-size:20px auto;
 		}
 		a.square:nth-child(2) .icon {
-			background:url('../img/icon_dribbble.png') center center no-repeat;
-			background-size:20px auto;
+			background:url('../img/icon_behance.png') center center no-repeat;
+			background-size:30px auto;
 		}
 		a.square:nth-child(3) .icon {
 			background:url('../img/icon_linkedin.png') center center no-repeat ;
