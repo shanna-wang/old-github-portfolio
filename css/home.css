@@ -247,7 +247,25 @@ h1 {
   margin: 50px auto;
   color: rgba(47, 41, 44, 0.9);
   text-align: center;
-  padding-top: 50px; }
+  padding-top: 50px;
+  /*	.work:nth-child(2):hover {
+  		background-color:rgb(38,209,176) ;
+  	}
+  	.work:nth-child(3):hover {
+  		background-color:rgb(0,0,0);
+  	}
+  	.work:nth-child(4):hover {
+  		background-color:rgb(244,78,78);
+  	}
+  	.work:nth-child(5):hover {
+  		background-color:rgb(200,222,124);
+  	}
+  	.work:nth-child(6):hover {
+  		background-color:rgb(103,65,79);
+  	}
+  	.work:nth-child(7):hover {
+  		background-color:rgb(251,122,134);
+  	}*/ }
   .pofo .work {
     position: relative;
     display: inline-block;
@@ -313,33 +331,27 @@ h1 {
   .pofo .work:nth-child(2) .overlay {
     background: url("../img/fractal.jpg") bottom center no-repeat rgba(47, 41, 44, 0.9);
     background-size: 1000px auto; }
-  .pofo .work:nth-child(2):hover {
-    background-color: #26d1b0; }
   .pofo .work:nth-child(3) .overlay {
     background: url("../img/fractal.jpg") top left no-repeat rgba(47, 41, 44, 0.9);
     background-size: 650px auto; }
-  .pofo .work:nth-child(3):hover {
-    background-color: black; }
   .pofo .work:nth-child(4) .overlay {
     background: url("../img/fractal.jpg") bottom right no-repeat rgba(47, 41, 44, 0.9);
     background-size: 1200px auto; }
-  .pofo .work:nth-child(4):hover {
-    background-color: #f44e4e; }
   .pofo .work:nth-child(5) .overlay {
     background: url("../img/fractal.jpg") top left no-repeat rgba(47, 41, 44, 0.9);
     background-size: 600px auto; }
-  .pofo .work:nth-child(5):hover {
-    background-color: #c8de7c; }
   .pofo .work:nth-child(6) .overlay {
     background: url("../img/fractal.jpg") top right no-repeat rgba(47, 41, 44, 0.9);
     background-size: 900px auto; }
-  .pofo .work:nth-child(6):hover {
-    background-color: #67414f; }
   .pofo .work:nth-child(7) .overlay {
     background: url("../img/fractal.jpg") bottom left no-repeat rgba(47, 41, 44, 0.9);
     background-size: 1000px auto; }
-  .pofo .work:nth-child(7):hover {
-    background-color: #fb7a86; }
+  .pofo .work:hover {
+    background-color: #a94452; }
+  .pofo .work:nth-child(2):hover, .pofo .work:nth-child(7):hover {
+    background-color: #ca7e7e; }
+  .pofo .work:nth-child(5):hover {
+    background-color: #bc7585; }
 
 @media only screen and (min-width: 500px) {
   .work {
@@ -396,7 +408,7 @@ h1 {
     font-size: 14px;
     font-family: 'Roboto Thin'; }
   .topbar a:hover {
-    background-color: rgba(135, 80, 100, 0.4);
+    background-color: #bc7585;
     color: white; }
 
 @media only screen and (min-width: 500px) {
@@ -413,9 +425,9 @@ h1 {
   font-family: 'Roboto';
   margin-left: 10px; }
 
-.theatre::-webkit-scrollbar {
-  display: none; }
-
+/*.theatre::-webkit-scrollbar { 
+    display: none; 
+}*/
 .theatre {
   position: fixed;
   top: 0;
@@ -492,8 +504,24 @@ h1 {
       text-align: center;
       line-height: 50px; }
       .theatre .preview .ss img {
-        width: 100%;
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        -ms-filter: blur(1px);
+        -o-filter: blur(1px);
+        filter: blur(1px);
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        width: 70%;
         margin-bottom: 20px; }
+      .theatre .preview .ss img:hover {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        -o-filter: blur(0px);
+        filter: blur(0px); }
   .theatre .close {
     cursor: pointer;
     position: fixed;
