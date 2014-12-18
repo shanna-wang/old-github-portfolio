@@ -1,0 +1,110 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+	 -moz-transition: $transition;
+	  -ms-transition: $transition;
+	   -o-transition: $transition;
+		  transition: $transition;	
+}
+
+
+/* post widths */
+
+
+/* 1 COLUMN : phones */
+
+.board-container {
+	width:100%;
+
+	position:relative;
+	margin:0 auto;
+}
+
+article {
+	margin:5%;
+	width:90%;
+
+	@include border-radius(8px);
+	overflow:hidden;
+	position:relative;
+}
+.mini-body {
+	width:80%;
+	padding: 10%;
+}
+/* 2 COLUMN */
+
+@media only screen 
+and (min-width : 550px) {
+	article {
+		width:42%;
+		margin:4%;
+	}
+	.mini-body {
+		width:90%;
+		padding: 5%;
+	}
+}
+
+/* 3 COLUMN */
+@media only screen 
+and (min-width : 1000px) {
+	.mini-body {
+		width:90%;
+		padding: 5%;
+	}
+	article {
+		width:27.3%;
+		margin:3%;
+	}
+}
+
+
+
+.mini-header {
+	width:100%;
+	position:relative;
+	padding:20px 0px;
+}
+.mini-body {
+	position:relative;
+	height:100px;
+	background-color:#fff;
+}
+.mini-post {
+	position:relative;
+	float:left;
+	background-color:rgba(0,0,0,0.1);
+	@include border-radius(5px);
+	width:20%;
+	height:30px;
+	margin:4% 6.6%;
+}
+.mini-header {
+	.title, .description {
+		width:80%;
+		margin:0 auto;
+		position:relative;
+		text-align:center;
+	}
+
+	.title {
+		color:rgba(0,0,0,0.5);
+		margin-top:10px;
+		font-family:"Signika Light";
+		text-transform:uppercase;
+		letter-spacing:2px;
+		font-size:22px;
+	}
+	.description {
+		font-family:'Roboto Light';
+		font-size:14px;
+		color:rgba(255,255,255,0.8);
+		margin-top:5px;
+	}
+}

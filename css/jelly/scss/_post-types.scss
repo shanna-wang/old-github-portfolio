@@ -1,0 +1,151 @@
+
+/* TEXT POST */
+
+.text-top, .text-right, .text-left {
+	background-color:#fff;
+	height:auto;
+}
+.text-img {
+	width:100%;
+	height:200px;
+	overflow:hidden;
+	position:relative;
+}
+.text-img img {
+	width:100%;
+}
+.text-body {
+	font-family:'Roboto Light';
+	font-size:14px;
+	line-height:16px;
+	position:relative;
+	float:left;
+	min-height:100px;
+	padding:5%;
+	width:90%;
+	text-align:justify;
+}
+.text-body p {
+	text-indent:20px;
+}
+.text-body h1{
+	font-family:'Roboto';
+	font-size:20px;
+	color:#333;
+	line-height:22px;
+	margin-bottom:10px;
+	display:block;
+	text-align:left;
+}
+.text-actions {
+	width:100%;
+}
+
+/* IMAGE POST */
+$largewidth: 400px;
+.image {
+	height:$largewidth;
+	overflow:hidden;
+	
+	.image-nav {
+		position:absolute;
+		right:0;
+		top:0;
+		display:table;
+		width:20px;
+		height:100%;
+	}
+	.image-nav-circles {
+		height:100%;
+		display:table-cell;
+		vertical-align:middle;
+	}
+	.image-circ {
+		height:7px;
+		width:7px;
+		@include border-radius(5px);
+		background-color:rgba(0,0,0,0.6);
+		margin:7px 0;
+		cursor:pointer;
+		@include transition(background-color 0.5s ease);
+	}
+	.image-circ.selected {
+		background-color:rgba(255,255,255,1);
+		@include transition(background-color 0.5s ease);
+
+	}
+	.image-img{
+		width:100%;
+		height:0;
+		padding:0;
+		margin:0;
+		@include transition(height 0.5s ease)
+	}
+
+	.image-img.visible {
+		height:$largewidth;
+		@include transition(height 0.5s ease)
+	}
+}
+
+.data-circle {
+	background-color:#fff;
+}
+
+.profile {
+	overflow:hidden;
+	@include  border-radius(8px);
+	@include transition(all .3s ease-in-out);
+
+	.photo-bg {
+		width:100%;
+		height:200px;
+		position:relative;
+	}
+	.photo-circle {
+		width:100px;
+		height:100px;
+		margin:0 auto;
+		position:relative;
+		margin-top:-80px;
+		@include border-radius(50px);
+		border:3px solid #fff;
+		z-index:1;
+	}
+	.description, .des-more {
+		font-family:'Roboto Light';
+		word-wrap:break-word;
+		font-size:12px;
+		line-height:14px;
+		text-align:center;
+		color:#888;
+		position:relative;
+	}
+	.description {
+		background-color:#fff;
+		margin-top:-26px;
+		padding:35px 10px 20px 10px;
+		z-index:0;
+	}
+	.description h1 {
+		text-transform:uppercase;
+		font-family:'Signika Light';
+		color:#42464B;
+		font-size:20px;
+		line-height:26px;
+	}
+	.des-foot {
+		position:relative;
+		width:100%;
+		height:40px;
+
+		.des-more {
+			color:#fff;
+			float:left;
+			height:40px;
+			line-height:40px;
+			width: 50%;
+		}
+		
+	}	
+}

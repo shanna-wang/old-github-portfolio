@@ -1,0 +1,29 @@
+#boardheader {
+	width:100%;
+	position:absolute;
+	top:0;
+	height:130px;
+	z-index:1;
+
+	.title, .description {
+		width:100%;
+		margin:0 auto;
+		position:relative;
+		text-align:center;
+	}
+
+	.title {
+		color:rgba(0,0,0,0.5);
+		margin-top:40px;
+		font-family:"Signika Light";
+		text-transform:uppercase;
+		letter-spacing:2px;
+		font-size:28px;
+	}
+	.description {
+		font-family:'Roboto Light';
+		font-size:14px;
+		color:rgba(255,255,255,0.6);
+		margin-top:10px;
+	}
+}
